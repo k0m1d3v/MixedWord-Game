@@ -67,3 +67,10 @@ main{
   .btn:active {
     filter: brightness(1.4);
   }
+
+  #Leaderboard-Btn{
+    translate: -139px;
+    width: 40px;
+    height: 55px;
+    color: #06b;
+  }
