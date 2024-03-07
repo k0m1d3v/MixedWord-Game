@@ -1,0 +1,52 @@
+.keyboard {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+}
+
+.key {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+}
+
+.key:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 90%;
+    font-size: 16px;
+    text-align: center;
+}
+
+.scoreAndTimer {
+    text-align: center;
+    padding: 20px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
