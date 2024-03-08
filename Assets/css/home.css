@@ -68,9 +68,53 @@ main{
     filter: brightness(1.4);
   }
 
-  #Leaderboard-Btn{
+  #Team-Btn{
     translate: -139px;
     width: 40px;
     height: 55px;
     color: #06b;
+  }
+  
+  #Journal-Btn {
+    translate: 139px;
+    width: 40px;
+    height: 55px;
+    color: #06b;
+  }
+
+  @media screen and (max-width: 768px) {
+    #textLogo {
+      margin-top: -5%;
+    }
+
+    .btn {
+      margin-top: 0%;
+    }
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    #textLogo {
+      margin-top: -6%;
+    }
+    .btn {
+      margin-top: -15%;
+    }
+  }
+
+  @media screen and (min-width: 1025px) and (max-width: 1440px){
+    #textLogo {
+      margin-top: -3%;
+    }
+    .btn {
+      margin-top: -20%;
+    }
+  }
+
+  @media screen and (min-width: 1441px) {
+    #textLogo {
+      margin-top: -2%;
+    }
+    .btn {
+      margin-top: -25%;
+    }
   }
