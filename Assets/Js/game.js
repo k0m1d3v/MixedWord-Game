@@ -63,11 +63,12 @@ inputs.forEach(input => {
         
         // Check for specific button values
         if (value === '❌') {
-            // Clear the wordInput
             wordInput.value = '';
         } else if (value === '➡') {
             checkWord();
             wordInput.value = '';
+        } else if (value === '⬅') {
+            wordInput.value = wordInput.value.slice(0, -1);
         } else {
             wordInput.value += value;
         }
@@ -86,6 +87,8 @@ function newWord() {
     shuffle(extractedWord);
     startTimer();
 }
+
+
 
 let timeLeft = 60; // Set the initial time (in seconds)
 
