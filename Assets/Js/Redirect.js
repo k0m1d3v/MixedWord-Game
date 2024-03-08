@@ -7,9 +7,9 @@ function redirectPlay(){
 }
 
 function redirectTeam(){
-    window.location = "..\\Pages\\ComingSoon.html"
+    window.location = "..\\Pages\\Team.html"
 }
 
 function redirectJournal(){
-    window.location = "..\\Pages\\ComingSoon.html"
+    window.location = "..\\Pages\\Journal.html"
 }
