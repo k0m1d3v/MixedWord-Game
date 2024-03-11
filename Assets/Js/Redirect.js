@@ -3,7 +3,7 @@ document.getElementById("Team-Btn").addEventListener("click", redirectTeam);
 document.getElementById("Journal-Btn").addEventListener("click", redirectJournal);
 
 function redirectPlay(){
-    window.location = "Pages\\Game.html"; 
+    window.location = "Pages\\DifficultySelector.html"; 
 }
 
 function redirectTeam(){
