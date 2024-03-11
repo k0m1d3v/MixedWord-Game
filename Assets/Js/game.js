@@ -16,9 +16,6 @@ switch (difficulty) {
     default:
         length = 6;
 }
-randWord(language, length);
-extractedWord = sessionStorage.getItem('word');
-shuffle(extractedWord);
 
 sessionStorage.setItem('score', score);
 
