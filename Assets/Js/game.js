@@ -1,8 +1,22 @@
 let timerInterval = null; // Initialize timerInterval to null
-
 let language = 'it';
-let length = 5;
 let score = 0;
+
+let difficulty = sessionStorage.getItem('difficulty');
+switch (difficulty) {
+    case 'easy':
+        length = 4;
+        break;
+    case 'medium':
+        length = 6;
+        break;
+    case 'hard':
+        length = 8;
+        break;
+    default:
+        length = 6;
+}
+
 sessionStorage.setItem('score', score);
 
 // Get the input elements
