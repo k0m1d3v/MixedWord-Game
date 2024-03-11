@@ -7,42 +7,132 @@
     <link rel="stylesheet" href="..\Assets/global.css" />
     <link rel="stylesheet" href="..\Assets/css/menu.css" />
     <link rel="stylesheet" href="..\Assets/css/background.css" />
+    <link rel="stylesheet" href="..\Assets/css/journal.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/eaa4ebae25.js" crossorigin="anonymous"></script>
   </head>
-    <body>
+  <body>
 
-        <div class="background">
-            <div><span class="dot"></span></div>
-            <div><span class="dot"></span></div>
-            <div><span class="dot"></span></div>
-            <div><span class="dot"></span></div>
-            <div><span class="dot"></span></div>
-            <div><span class="dot"></span></div>
-            <div><span class="dot"></span></div>
-            <div><span class="dot"></span></div>
-            <div><span class="dot"></span></div>
-            <div><span class="dot"></span></div>
-            <div><span class="dot"></span></div>
-            <div><span class="dot"></span></div>
-            <div><span class="dot"></span></div>
-            <div><span class="dot"></span></div>
-            <div><span class="dot"></span></div>
+    <div class="background">
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+      </div>
+
+      <div class="menu-container">
+        <input type="checkbox" id="toggle" checked />
+        <label class="button" for="toggle">
+            <nav class="nav" aria-label="nav">
+                <ul>
+                    <li><a href="..\Pages\Team.html"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="..\Index.html"><i class="fa-solid fa-house"></i></a></li>
+                    <li><a href="..\Pages\Journal.html"><i class="fa-solid fa-newspaper"></i></a></li>
+                </ul>
+            </nav>
+        </label>
+      </div>
+    
+    <div class="journal-container">
+      <h1>Dev Journal:</h1>
+      <div class="journal-items">
+        <div class="panel-group" id="accordion">
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                  Day 1
+                </a>
+              </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse in">
+              <div class="panel-body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </div>
+            </div>
           </div>
 
-        <div class="menu-container">
-            <input type="checkbox" id="toggle" checked />
-            <label class="button" for="toggle">
-                <nav class="nav" aria-label="nav">
-                    <ul>
-                        <li><a href="..\Pages\Team.html"><i class="fa-solid fa-user"></i></a></li>
-                        <li><a href="..\Index.html"><i class="fa-solid fa-house"></i></a></li>
-                        <li><a href="..\Pages\Journal.html"><i class="fa-solid fa-newspaper"></i></a></li>
-                    </ul>
-                </nav>
-            </label>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                  Day 2</a>
+              </h4>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse">
+              <div class="panel-body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat.
+              </div>
+            </div>
           </div>
 
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                  Day 3
+                </a>
+              </h4>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse">
+              <div class="panel-body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat.
+              </div>
+            </div>
+          </div>
           
-          
-    </body>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                  Day 4
+                </a>
+              </h4>
+            </div>
+            <div id="collapse4" class="panel-collapse collapse">
+              <div class="panel-body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+                  Day 5
+                </a>
+              </h4>
+            </div>
+            <div id="collapse5" class="panel-collapse collapse">
+              <div class="panel-body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</body>
 </html>
