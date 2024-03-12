@@ -6,7 +6,7 @@
   padding: 20px;
   width: 65%;
   height: 50%;
-  background-color: #fff;
+  background-color: #20dad8;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   border-radius: 25px;
@@ -14,8 +14,8 @@
 
 .journal-container h1 {
   position: absolute;
-  top: 15%;
-  color: #fff;
+  top: 12%;
+  color: #20dad8;
   font-size: 4em;
   font-weight: 600;
   font-family: 'Lobster', cursive;

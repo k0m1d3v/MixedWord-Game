@@ -6,7 +6,7 @@ main{
 }
 
 .btn {
-    --color: #15172b;
+    --color: #143785;
     position: absolute;
     display: flex;
     justify-content: center;
@@ -22,7 +22,7 @@ main{
     font-weight: bold;
     background: var(--color);
     border-radius: 2rem;
-    color: #06b;
+    color: #20b5d8;
     padding: 1rem;
   }
   
@@ -30,7 +30,7 @@ main{
     content: '';
     z-index: -1;
     background-color: var(--color);
-    border: 2px solid #06b;
+    border: 2px solid #20b5d8;
     border-radius: 2rem;
     width: 110%;
     height: 100%;
@@ -72,14 +72,14 @@ main{
     translate: -139px;
     width: 40px;
     height: 55px;
-    color: #06b;
+    color: #20b5d8;
   }
   
   #Journal-Btn {
     translate: 139px;
     width: 40px;
     height: 55px;
-    color: #06b;
+    color: #20b5d8;
   }
 
   @media screen and (max-width: 768px) {
