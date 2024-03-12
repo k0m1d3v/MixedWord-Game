@@ -27,12 +27,11 @@
 .background div {
   height: 60px;
   width: 60px;
-  border: 2px solid #baefed);
   border-radius: 50px;
   position: absolute;
   top: 10%;
   left: 10%;
-  animation: 4s linear infinite;
+  animation: 3s linear infinite;
 }
 
 div .dot {

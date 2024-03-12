@@ -1,3 +1,11 @@
+.Selection-containers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
 .difficulty-container {
   z-index: 1;
   display: flex;
@@ -10,7 +18,7 @@
 .difficulty-container h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color : #fff;
+  color: #fff;
 }
 
 .difficulty-container button {
@@ -26,6 +34,38 @@
 }
 
 .difficulty-container button:hover {
+  background-color: #15172b;
+  color: #fff;
+}
+
+.language-container {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.language-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.language-container button {
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #fff;
+  color: #000;
+  transition: 0.3s;
+}
+
+.language-container button:hover {
   background-color: #15172b;
   color: #fff;
 }

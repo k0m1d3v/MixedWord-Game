@@ -1,5 +1,4 @@
 let timerInterval = null; // Initialize timerInterval to null
-let language = 'it';
 let score = 0;
 
 let difficulty = sessionStorage.getItem('difficulty');
@@ -16,6 +15,7 @@ switch (difficulty) {
     default:
         length = 6;
 }
+let language = sessionStorage.getItem('language');
 
 sessionStorage.setItem('score', score);
 
