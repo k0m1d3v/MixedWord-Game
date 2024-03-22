@@ -1,6 +1,6 @@
 let timerInterval = null; // Initialize timerInterval to null
+let language = 'it';
 let score = 0;
-
 let difficulty = sessionStorage.getItem('difficulty');
 switch (difficulty) {
     case 'easy':
@@ -14,8 +14,7 @@ switch (difficulty) {
         break;
     default:
         length = 6;
-}
-let language = sessionStorage.getItem('language');
+};
 
 sessionStorage.setItem('score', score);
 
@@ -23,25 +22,21 @@ sessionStorage.setItem('score', score);
 const inputs = document.querySelectorAll('input[type="button"]');
 const wordInput = document.getElementById('wordInput');
 const scoreDisplay = document.getElementById('scoreDisplay');
-
 let checkWord = () => {
     if (wordInput.value.toUpperCase() === extractedWord.toUpperCase()) {
         alert('Hai indovinato!'); // TODO: Replace with some css effect
-
         updateScore();
         newWord();
     } else {
         alert('Riprova!'); // TODO: Replace with some css effect
     }
 }
-
 function shuffle(extractedWord) {
     let parola = extractedWord;
     let output = '';
     let l = parola.length;
     let ll = l;
     const parolArray = [];
-
     for (let i = 0; i < l; i++) {
         parolArray[i] = parola.at(i);
     }
@@ -58,7 +53,6 @@ function shuffle(extractedWord) {
         shuffle(extractedWord);
     }
 }
-
 function randWord(ling,lunghezza){
     const xmlhttp = new XMLHttpRequest();
     xmlhttp.onload = function() {
@@ -68,7 +62,6 @@ function randWord(ling,lunghezza){
     xmlhttp.open("GET", "https://www.defio.info/REST/lingue/entrambe.php?lingua="+ling+"&lun="+lunghezza);
     xmlhttp.send();
 }
-
 // Add event listener to each input
 inputs.forEach(input => {
     input.addEventListener('click', event => {
@@ -88,40 +81,30 @@ inputs.forEach(input => {
         }
     });
 });
-
 function updateScore() {
     score++;
     sessionStorage.setItem('score', score);
     scoreDisplay.innerHTML = score;
 }
-
 function newWord() {
     randWord(language, length);
     extractedWord = sessionStorage.getItem('word');
     shuffle(extractedWord);
     startTimer();
 }
-
-
-
 let timeLeft = 60; // Set the initial time (in seconds)
-
 // Get the HTML element where you want to display the timer
 const timerElement = document.getElementById('timer'); 
-
 function startTimer() {
     // Clear any existing timer
     if (timerInterval) {
         clearInterval(timerInterval);
     }
-
     timeLeft = 60; // Reset the time
-
     // Update the timer every second
     timerInterval = setInterval(() => {
         timeLeft--;
         timerElement.textContent = timeLeft;
-
         if (timeLeft <= 0) {
             clearInterval(timerInterval); // Stop the timer when it reaches 0
             
@@ -133,5 +116,4 @@ function startTimer() {
         }
     }, 1000);
 }
-
 newWord();
