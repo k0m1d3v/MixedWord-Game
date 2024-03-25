@@ -1,8 +1,3 @@
-.keyboard {
-    display: flex;
-    flex-direction: column;
-}
-
 .row {
     display: flex;
 }
@@ -16,14 +11,13 @@
     width: 100%;
     height: 100%;
     background-color: transparent;
-    border: none;
-    text-align: center;
+    border: 1px solid #ccc;
     font-size: 18px;
-    color: #333;
+    color: white;
 }
 
 .key:hover {
-    background-color: #f0f0f0;
+    background-color: #ccc;
     cursor: pointer;
 }
 
@@ -32,6 +26,7 @@ input[type="text"] {
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 20px;
+    margin-left: 25px;
     width: 90%;
     font-size: 16px;
     text-align: center;
@@ -40,9 +35,11 @@ input[type="text"] {
 .scoreAndTimer {
     text-align: center;
     padding: 20px;
+    color: white;
 }
 
 body {
+    background: linear-gradient(180deg, #20b5d8, 5%, #1d54ba, 50%, #2350b0);
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
