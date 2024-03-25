@@ -3,13 +3,13 @@ let language = 'it';
 let score = 0;
 let difficulty = sessionStorage.getItem('difficulty');
 switch (difficulty) {
-    case 'easy':
+    case 'Easy':
         length = 4;
         break;
-    case 'medium':
+    case 'Medium':
         length = 6;
         break;
-    case 'hard':
+    case 'Hard':
         length = 8;
         break;
     default:

@@ -1,120 +1,126 @@
-main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30%;
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30%;
+  font-family: "Krona One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .btn {
-    --color: #143785;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all .5s;
-    border: none;
-    background-color: transparent;
-    margin-top: -400px;
-  }
-  
-  .btn div {
-    letter-spacing: 2px;
-    font-weight: bold;
-    background: var(--color);
-    border-radius: 2rem;
-    color: #20b5d8;
-    padding: 1rem;
-  }
-  
-  .btn::before {
-    content: '';
-    z-index: -1;
-    background-color: var(--color);
-    border: 2px solid #20b5d8;
-    border-radius: 2rem;
-    width: 110%;
-    height: 100%;
-    position: absolute;
-    transform: rotate(10deg);
-    transition: .5s;
-    opacity: 0.2;
-  }
-  
-  .btn:hover {
-    cursor: pointer;
-    filter: brightness(1.2);
-    transform: scale(1.1);
-  }
-  
-  .btn:hover::before {
-    transform: rotate(0deg);
-    opacity: 1;
-  }
-  
-  .btn svg {
-    transform: translateX(-200%);
-    transition: .5s;
-    width: 0;
-    opacity: 0;
-  }
-  
-  .btn:hover svg {
-    width: 25px;
-    transform: translateX(0%);
-    opacity: 1;
-  }
-  
-  .btn:active {
-    filter: brightness(1.4);
+  --color: #143785;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .5s;
+  border: none;
+  background-color: transparent;
+  margin-top: -400px;
+}
+
+.btn div {
+  letter-spacing: 2px;
+  font-weight: bold;
+  background: var(--color);
+  border-radius: 2rem;
+  color: #20b5d8;
+  padding: 1rem;
+}
+
+.btn::before {
+  content: '';
+  z-index: -1;
+  background-color: var(--color);
+  border: 2px solid #20b5d8;
+  border-radius: 2rem;
+  width: 110%;
+  height: 100%;
+  position: absolute;
+  transform: rotate(10deg);
+  transition: .5s;
+  opacity: 0.2;
+}
+
+.btn:hover {
+  cursor: pointer;
+  filter: brightness(1.2);
+  transform: scale(1.1);
+}
+
+.btn:hover::before {
+  transform: rotate(0deg);
+  opacity: 1;
+}
+
+.btn svg {
+  transform: translateX(-200%);
+  transition: .5s;
+  width: 0;
+  opacity: 0;
+}
+
+.btn:hover svg {
+  width: 25px;
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.btn:active {
+  filter: brightness(1.4);
+}
+
+#Team-Btn {
+  translate: -139px;
+  width: 40px;
+  height: 55px;
+  color: #20b5d8;
+}
+
+#Journal-Btn {
+  translate: 139px;
+  width: 40px;
+  height: 55px;
+  color: #20b5d8;
+}
+
+@media screen and (max-width: 768px) {
+  #textLogo {
+    margin-top: -5%;
   }
 
-  #Team-Btn{
-    translate: -139px;
-    width: 40px;
-    height: 55px;
-    color: #20b5d8;
+  .btn {
+    margin-top: 0%;
   }
-  
-  #Journal-Btn {
-    translate: 139px;
-    width: 40px;
-    height: 55px;
-    color: #20b5d8;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  #textLogo {
+    margin-top: -6%;
   }
 
-  @media screen and (max-width: 768px) {
-    #textLogo {
-      margin-top: -5%;
-    }
+  .btn {
+    margin-top: -15%;
+  }
+}
 
-    .btn {
-      margin-top: 0%;
-    }
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  #textLogo {
+    margin-top: -3%;
   }
 
-  @media screen and (min-width: 769px) and (max-width: 1024px) {
-    #textLogo {
-      margin-top: -6%;
-    }
-    .btn {
-      margin-top: -15%;
-    }
+  .btn {
+    margin-top: -20%;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  #textLogo {
+    margin-top: -2%;
   }
 
-  @media screen and (min-width: 1025px) and (max-width: 1440px){
-    #textLogo {
-      margin-top: -3%;
-    }
-    .btn {
-      margin-top: -20%;
-    }
+  .btn {
+    margin-top: -25%;
   }
-
-  @media screen and (min-width: 1441px) {
-    #textLogo {
-      margin-top: -2%;
-    }
-    .btn {
-      margin-top: -25%;
-    }
-  }
+}

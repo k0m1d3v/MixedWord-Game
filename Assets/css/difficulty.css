@@ -1,71 +1,47 @@
 .Selection-containers {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 20px;
-}
-
-.difficulty-container {
   z-index: 1;
+  position: absolute;
+  padding: 25px;
+  color: white;
+}
+
+.difficulty-selector {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.arrow {
+  font-size: 60px;
+  font-weight: bold;
+  color: azure;
+  padding: 10px;
+  background: none;
+  border: none;
+}
+
+.arrow:hover {
+  color: #20b5d8;
+}
+
+.confirm-button {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #143785;
+  color: #20b5d8;
+  border-color: transparent;
+}
+
+.confirm-button:hover {
+  transition: all .5s;
+  border-radius: 2rem;
+  width: 35%;
+  height: 100%;
+}
+
+.button-parent {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  margin-top: 20px;
-}
-
-.difficulty-container h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #fff;
-}
-
-.difficulty-container button {
-  padding: 10px 20px;
-  font-size: 1.5rem;
-  margin: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: #fff;
-  color: #000;
-  transition: 0.3s;
-}
-
-.difficulty-container button:hover {
-  background-color: #15172b;
-  color: #fff;
-}
-
-.language-container {
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 20px;
-}
-
-.language-container h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #fff;
-}
-
-.language-container button {
-  padding: 10px 20px;
-  font-size: 1.5rem;
-  margin: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: #fff;
-  color: #000;
-  transition: 0.3s;
-}
-
-.language-container button:hover {
-  background-color: #15172b;
-  color: #fff;
 }

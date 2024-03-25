@@ -1,29 +1,49 @@
-document.getElementById("easy-button").addEventListener("click", redirectEasy);
-document.getElementById("medium-button").addEventListener("click", redirectMedium);
-document.getElementById("hard-button").addEventListener("click", redirectHard);
-document.getElementById("italian-button").addEventListener("click", setItalian);
-document.getElementById("english-button").addEventListener("click", setEnglish);
+const buttonParent = document.querySelector('.button-parent');
+const difficultyLabel = document.querySelector('.difficulty-label');
+const rightArrow = document.querySelector('.right-arrow');
+const leftArrow = document.querySelector('.left-arrow');
+let difficulty = 0;
 
+buttonParent.addEventListener('click', () => {
+    getDifficulty(difficultyLabel.textContent);
 
-function redirectEasy(){
-    sessionStorage.setItem("difficulty", "easy");
     window.location = "..\\Pages\\Game.html"
+});
+
+rightArrow.addEventListener('click', () => {
+    if(difficulty === 3){
+        difficulty = 0;
+    }else{
+        difficulty++;
+    }
+    updateLabel();
+});
+
+leftArrow.addEventListener('click', () => {
+    if(difficulty === 0){
+        difficulty = 3;
+    }else{
+        difficulty--;
+    }
+    updateLabel();
+});
+
+function updateLabel() {
+    if (difficulty === 0) {
+        difficultyLabel.textContent = 'Medium';
+    } else if (difficulty === 1) {
+        difficultyLabel.textContent = 'Hard';
+    } else {
+        difficultyLabel.textContent = 'Easy';
+    }
 }
 
-function redirectMedium(){
-    sessionStorage.setItem("difficulty", "medium");
-    window.location = "..\\Pages\\Game.html"
-}
-
-function redirectHard(){
-    sessionStorage.setItem("difficulty", "hard");
-    window.location = "..\\Pages\\Game.html"
-}
-
-function setItalian(){
-    sessionStorage.setItem("language", "it");
-}
-
-function setEnglish(){
-    sessionStorage.setItem("language", "en");
+function getDifficulty(diff) {
+    if(diff === 'Medium'){
+        sessionStorage.setItem('difficulty', 'Medium');
+    }else if(diff === 'Hard'){
+        sessionStorage.setItem('difficulty', 'Hard');
+    }else{
+        sessionStorage.setItem('difficulty', 'Easy');
+    }
 }

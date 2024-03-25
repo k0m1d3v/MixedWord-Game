@@ -11,17 +11,17 @@
 }
 
 .background h1 {
-  top: 50%;
+  top: 53%;
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
   letter-spacing: 1px;
   word-spacing: 2px;
   color: #baefed;
-  font-size: 80px;
-  font-weight: 888;
-  text-transform: uppercase;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: "Krona One", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 70px;
 }
 
 .background div {
