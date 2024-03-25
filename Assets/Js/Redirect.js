@@ -7,7 +7,7 @@ function redirectPlay(){
 }
 
 function redirectTeam(){
-    window.location = "..\\Pages\\Team.html"
+    window.location = "..\\Pages\\Rules.html"
 }
 
 function redirectJournal(){
