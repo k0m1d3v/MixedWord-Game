@@ -34,9 +34,7 @@
 }
 
 .confirm-button:hover {
-  transition: all .5s;
-  border-radius: 2rem;
-  width: 35%;
+  width: 45%;
   height: 100%;
 }
 
