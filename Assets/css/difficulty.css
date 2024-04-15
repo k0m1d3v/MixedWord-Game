@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
+
 .Selection-containers {
   z-index: 1;
   position: absolute;
@@ -42,4 +44,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.title{
+  position: absolute;
+  top: 3%;
+  font-size: 60px;
+  color: white;
+}
+
+.rubik-bubbles-regular {
+  font-family: "Rubik Bubbles", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }

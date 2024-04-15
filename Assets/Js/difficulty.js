@@ -7,7 +7,7 @@ let difficulty = 0;
 buttonParent.addEventListener('click', () => {
     getDifficulty(difficultyLabel.textContent);
 
-    window.location = "..\\Pages\\Game.html"
+    window.location = "../Pages/Languages.html"
 });
 
 rightArrow.addEventListener('click', () => {
@@ -30,11 +30,11 @@ leftArrow.addEventListener('click', () => {
 
 function updateLabel() {
     if (difficulty === 0) {
-        difficultyLabel.textContent = 'Medium';
+        difficultyLabel.textContent = 'base';
     } else if (difficulty === 1) {
-        difficultyLabel.textContent = 'Hard';
+        difficultyLabel.textContent = 'hard';
     } else {
-        difficultyLabel.textContent = 'Easy';
+        difficultyLabel.textContent = 'easy';
     }
 }
 

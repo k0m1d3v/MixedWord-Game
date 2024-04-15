@@ -1,6 +1,7 @@
 let timerInterval = null; // Initialize timerInterval to null
-let language = 'it';
+let language = sessionStorage.getItem('language');
 let score = 0;
+
 let difficulty = sessionStorage.getItem('difficulty');
 switch (difficulty) {
     case 'Easy':
