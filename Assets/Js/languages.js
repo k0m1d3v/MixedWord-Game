@@ -2,16 +2,16 @@ const buttonParent = document.querySelector('.button-parent');
 const languageLabel = document.querySelector('.language-label');
 const rightArrow = document.querySelector('.right-arrow');
 const leftArrow = document.querySelector('.left-arrow');
-let language = "en";
+let language = "it";
 
 onload = () => {
-    const language = sessionStorage.setItem('language', 'en');
+    const language = sessionStorage.setItem('language', 'it');
 };
 
 buttonParent.addEventListener('click', () => {
     getLanguage(languageLabel.textContent);
 
-    window.location = "../Pages/Game.html"
+    window.location = "../Pages/Settings.html"
 });
 
 rightArrow.addEventListener('click', () => {

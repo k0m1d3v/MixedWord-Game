@@ -39,9 +39,9 @@ function updateLabel() {
 }
 
 function getDifficulty(diff) {
-    if(diff === 'Medium'){
+    if(diff === 'base'){
         sessionStorage.setItem('difficulty', 'Medium');
-    }else if(diff === 'Hard'){
+    }else if(diff === 'hard'){
         sessionStorage.setItem('difficulty', 'Hard');
     }else{
         sessionStorage.setItem('difficulty', 'Easy');
