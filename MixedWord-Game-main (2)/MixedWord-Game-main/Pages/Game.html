@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game</title>
+    <script src="https://kit.fontawesome.com/eaa4ebae25.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="..\Assets\css\menu.css">
+    <link rel="stylesheet" href="..\Assets\global.css">
+    <link rel="stylesheet" href="..\Assets\css\game.css">
+</head>
+<body>
+
+    <div class="menu-container">
+        <input type="checkbox" id="toggle" checked />
+        <label class="button" for="toggle">
+            <nav class="nav" aria-label="nav">
+                <ul>
+                    <li><a href="..\Pages\Rules.html"><i class="fa-solid fa-book"></i></a></li>
+                    <li><a href="..\Index.html"><i class="fa-solid fa-house"></i></a></li>
+                    <li><a href="..\Pages\Journal.html"><i class="fa-solid fa-newspaper"></i></a></li>
+                </ul>
+            </nav>
+        </label>
+      </div>
+
+    <div id="keyboard">
+        <h1 class="scoreAndTimer">Score: <span id="scoreDisplay">0</span></h1>
+        <input type="text" id="wordShuffled" placeholder="Generated and shuffled word" disabled>
+        <input type="text" id="wordInput" placeholder="Type the word" disabled>
+        <table>
+            <tr class="row">
+                <td><input class="key" type="button" value="Q"></td>
+                <td><input class="key" type="button" value="W"></td>
+                <td><input class="key" type="button" value="E"></td>
+                <td><input class="key" type="button" value="R"></td>
+                <td><input class="key" type="button" value="T"></td>
+                <td><input class="key" type="button" value="Y"></td>
+                <td><input class="key" type="button" value="U"></td>
+                <td><input class="key" type="button" value="I"></td>
+                <td><input class="key" type="button" value="O"></td>
+                <td><input class="key" type="button" value="P"></td>
+                
+                <td><input class="key" type="button" value="⬅"></td>
+            </tr>
+            <tr class="row">
+                <td><input class="key" type="button" value="A"></td>
+                <td><input class="key" type="button" value="S"></td>
+                <td><input class="key" type="button" value="D"></td>
+                <td><input class="key" type="button" value="F"></td>
+                <td><input class="key" type="button" value="G"></td>
+                <td><input class="key" type="button" value="H"></td>
+                <td><input class="key" type="button" value="J"></td>
+                <td><input class="key" type="button" value="K"></td>
+                <td><input class="key" type="button" value="L"></td>
+                <td><input class="key" type="button" value="➡" style="width: 90px;"></td>
+            </tr>
+            <tr class="row">
+                <td><input class="key" type="button" value="&#x274C;"></td>  
+                <td><input class="key" type="button" value="Z"></td>
+                <td><input class="key" type="button" value="X"></td>
+                <td><input class="key" type="button" value="C"></td>
+                <td><input class="key" type="button" value="V"></td>
+                <td><input class="key" type="button" value="B"></td>
+                <td><input class="key" type="button" value="N"></td>
+                <td><input class="key" type="button" value="M"></td>
+                <td><input class="key" type="button" value="K"></td>
+            </tr>
+        </table>
+
+        <h1 class="scoreAndTimer">Timer: <span id="timer">0</span></h1>
+    </div>
+
+    <script src="..\Assets\Js\game.js"></script>
+</body>
+</html>

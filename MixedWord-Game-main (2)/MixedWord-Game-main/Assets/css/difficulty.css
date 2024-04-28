@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
+
+.Selection-containers {
+  z-index: 1;
+  position: absolute;
+  padding: 25px;
+  color: white;
+}
+
+.difficulty-selector {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.arrow {
+  font-size: 60px;
+  font-weight: bold;
+  color: azure;
+  padding: 10px;
+  background: none;
+  border: none;
+}
+
+.arrow:hover {
+  color: #20b5d8;
+}
+
+.confirm-button {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #143785;
+  color: #20b5d8;
+  border-color: transparent;
+}
+
+.confirm-button:hover {
+  width: 45%;
+  height: 100%;
+}
+
+.button-parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title{
+  position: absolute;
+  top: 3%;
+  font-size: 60px;
+  color: white;
+}
+
+.rubik-bubbles-regular {
+  font-family: "Rubik Bubbles", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
