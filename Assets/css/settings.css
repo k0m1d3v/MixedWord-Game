@@ -3,11 +3,10 @@
 .Selection-containers {
   position: absolute;
   padding: 25px;
-  background-color: #143785;
   color: white;
 }
 
-.input-selector {
+.settings-selector {
   font-size: 60px;
   font-weight: bold;
 }
@@ -54,4 +53,17 @@
   font-family: "Rubik Bubbles", system-ui;
   font-weight: 400;
   font-style: normal;
+}
+
+.arrow {
+  font-size: 60px;
+  font-weight: bold;
+  color: azure;
+  padding: 10px;
+  background: none;
+  border: none;
+}
+
+.arrow:hover {
+  color: #20b5d8;
 }
