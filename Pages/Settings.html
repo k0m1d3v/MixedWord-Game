@@ -2,12 +2,12 @@
 <html lang="it-IT">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link rel="stylesheet" href="..\Assets/global.css"/>
-    <link rel="stylesheet" href="..\Assets/css/menu.css"/>
-    <link rel="stylesheet" href="..\Assets/css/background.css"/>
-    <link rel="stylesheet" href="..\Assets/css/settings.css"/>
+    <link rel="stylesheet" href="..\Assets/global.css" />
+    <link rel="stylesheet" href="..\Assets/css/menu.css" />
+    <link rel="stylesheet" href="..\Assets/css/background.css" />
+    <link rel="stylesheet" href="..\Assets/css/settings.css">
     <script src="https://kit.fontawesome.com/eaa4ebae25.js" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -33,27 +33,34 @@
       <div class="menu-container">
         <input type="checkbox" id="toggle" checked />
         <label class="button" for="toggle">
-            <nav class="nav" aria-label="nav">
-              <ul>
-                <li><a href="..\Pages\Rules.html"><i class="fa-solid fa-book"></i></a></li>
-                <li><a href="..\Index.html"><i class="fa-solid fa-house"></i></a></li>
-                <li><a href="..\Pages\Journal.html"><i class="fa-solid fa-newspaper"></i></a></li>
+          <nav class="nav" aria-label="nav">
+            <ul>
+              <li>
+                <a href="..\Index.html"><i class="fa-solid fa-house"></i></a>
+              </li>
+              <li>
+                <a href="..\Pages\Settings.html"><i class="fa-solid fa-gear"></i></a>
+              </li>
             </ul>
-            </nav>
+          </nav>
         </label>
       </div>
 
-      <h1 class="title rubik-bubbles-regular"> Settings: </h1>
-
-      <div class="Selection-containers">
-        <div class="settings-selector">
-            <button class="arrow left-arrow">&#8249;</button>
-                <label class="settings-label" for="settings">Tastiera</label>
-            <button class="arrow right-arrow">&#8250;</button>
+      <main>
+        <div class="settingsDiv">
+            <h1>Adjust your settings:</h1>
+            <br>
+            <div>
+                <h2>language:</h2>
+                <input type="radio" name="fav_language" id="Italian" value="Italian">
+                <label for="Italian">Italian</label><br>
+                <input type="radio" name="fav_language" id="English" value="English">
+                <label for="English">English</label>
+            </div>
         </div>
-        <div class="button-parent"><button class="confirm-button">Confirm</button></div>
-    </div>
+      </main>
 
-      <script src="../Assets/Js/settings.js"></script>
+      
+      
 </body>
 </html>

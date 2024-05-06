@@ -25,8 +25,8 @@ body {
 
 .button {
   position: absolute;
-  z-index: 999;
-  width: 240px;
+  z-index: 9;
+  width: 195px;
   height: 65px;
   background: #143785;
   border-radius: 15px;

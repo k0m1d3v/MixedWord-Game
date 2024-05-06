@@ -35,7 +35,7 @@ main {
   background-color: var(--color);
   border: 2px solid #20b5d8;
   border-radius: 2rem;
-  width: 110%;
+  width: 120%;
   height: 100%;
   position: absolute;
   transform: rotate(10deg);
@@ -65,24 +65,11 @@ main {
   width: 25px;
   transform: translateX(0%);
   opacity: 1;
+  color: white;
 }
 
 .btn:active {
   filter: brightness(1.4);
-}
-
-#Team-Btn {
-  translate: -139px;
-  width: 40px;
-  height: 55px;
-  color: #20b5d8;
-}
-
-#Journal-Btn {
-  translate: 139px;
-  width: 40px;
-  height: 55px;
-  color: #20b5d8;
 }
 
 .background img {
