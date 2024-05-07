@@ -11,21 +11,24 @@
 </head>
 <body>
 
-    <div class="menu-container">
-        <input type="checkbox" id="toggle" checked />
-        <label class="button" for="toggle">
-          <nav class="nav" aria-label="nav">
-            <ul>
-              <li>
-                <a href="..\Index.html"><i class="fa-solid fa-house"></i></a>
-              </li>
-              <li>
-                <a href="..\Pages\Settings.html"><i class="fa-solid fa-gear"></i></a>
-              </li>
-            </ul>
-          </nav>
-        </label>
-      </div>
+  <div class="menu-container">
+    <input type="checkbox" id="toggle" checked />
+    <label class="button" for="toggle">
+      <nav class="nav" aria-label="nav">
+        <ul>
+          <li>
+            <a href="..\Index.html"><i class="fa-solid fa-house"></i></a>
+          </li>
+          <li>
+            <a href="..\Pages\Settings.html"><i class="fa-solid fa-gear"></i></a>
+          </li>
+          <li>
+            <a href="..\Pages\Team.html"><i class="fa-solid fa-user"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </label>
+  </div>
 
     <div id="keyboard">
         <h1 class="scoreAndTimer">Score: <span id="scoreDisplay">0</span></h1>
@@ -43,10 +46,12 @@
                 <td><input class="key" type="button" value="I"></td>
                 <td><input class="key" type="button" value="O"></td>
                 <td><input class="key" type="button" value="P"></td>
-                
                 <td><input class="key" type="button" value="⬅"></td>
+                </td><td><input class="key" type="button" value="&#x274C;" style="width: 45px;"></td>
             </tr>
+
             <tr class="row">
+               <td><input class="keyInvisible" type="button" value=""></td>
                 <td><input class="key" type="button" value="A"></td>
                 <td><input class="key" type="button" value="S"></td>
                 <td><input class="key" type="button" value="D"></td>
@@ -56,18 +61,21 @@
                 <td><input class="key" type="button" value="J"></td>
                 <td><input class="key" type="button" value="K"></td>
                 <td><input class="key" type="button" value="L"></td>
-                <td><input class="key" type="button" value="➡" style="width: 90px;"></td>
+                <td><input class="key" type="button" value="➡" style="width: 55px;"></td>
             </tr>
+
             <tr class="row">
-                <td><input class="key" type="button" value="&#x274C;"></td>  
+                <td><input class="keyInvisible" type="button" value=""></td>
+                <td><input class="keyInvisible" type="button" value=""></td>
+                <td><input class="keyInvisible" type="button" value=""></td>
                 <td><input class="key" type="button" value="Z"></td>
                 <td><input class="key" type="button" value="X"></td>
                 <td><input class="key" type="button" value="C"></td>
                 <td><input class="key" type="button" value="V"></td>
                 <td><input class="key" type="button" value="B"></td>
                 <td><input class="key" type="button" value="N"></td>
-                <td><input class="key" type="button" value="M"></td>
-                <td><input class="key" type="button" value="K"></td>
+                <td><input class="key" type="button" value="M">
+                
             </tr>
         </table>
 

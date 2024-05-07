@@ -41,24 +41,64 @@
               <li>
                 <a href="..\Pages\Settings.html"><i class="fa-solid fa-gear"></i></a>
               </li>
+              <li>
+                <a href="..\Pages\Team.html"><i class="fa-solid fa-user"></i></a>
+              </li>
             </ul>
           </nav>
         </label>
       </div>
 
-      <main>
+    <main>
         <div class="settingsDiv">
             <h1>Adjust your settings:</h1>
             <br>
-            <div>
-                <h2>language:</h2>
-                <input type="radio" name="fav_language" id="Italian" value="Italian">
-                <label for="Italian">Italian</label><br>
-                <input type="radio" name="fav_language" id="English" value="English">
-                <label for="English">English</label>
+            <h2>Language:</h2>
+            <div class="languageSelector">
+                <input class="flag" type="radio" id="Italian" name="language" value="Italian">
+                <label for="Italian">
+                    <img src="../Assets/svg/it.png" alt="Italian Flag">
+                </label>
+                <input class="flag" type="radio" id="English" name="language" value="English">
+                <label for="English">
+                    <img src="../Assets/svg/gb.png" alt="English Flag">
+                </label>
+            </div>
+            <br>
+            <h2>Difficulty:</h2>
+            <div class="Selection-containers">
+                <div class="difficulty-selector">
+                    <button class="arrow left-arrow">&#8249;</button>
+                    <label class="difficulty-label" for="difficulty">medium</label>
+                    <button class="arrow right-arrow">&#8250;</button>
+                    <br>
+                </div>
+            </div>
+            <br>
+            <h2>Volume:</h2>
+            <div class="volumeSelector">
+              <input type="checkbox" id="toggleVolume" class="toggleCheckbox" />
+              <label for="toggleVolume" class="toggleContainer">
+                <div>Sound</div>   
+                <div>Mute</div>
+              </label>
+            </div>
+            <br>
+            <h2>Keyboard type:</h2>
+            <div class="inputSelector">
+              <input type="checkbox" id="toggleInput" class="toggleCheckbox" />
+              <label for="toggleInput" class="toggleContainer">
+                <div>On-Screen</div>   
+                <div>Physical</div>
+              </label>
+            </div>
+            <br>
+            <hr class="rounded">
+            <div class="confirmBtnContainer">
+              <button class="saveButton">Confirm</button>
             </div>
         </div>
-      </main>
+    </main>
 
       
       

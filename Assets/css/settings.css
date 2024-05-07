@@ -2,8 +2,168 @@
   background-color: #143785;
   color: white;
   border-radius: 10px;
-  padding: 20px;
+  padding: 40px;
   position: absolute;
-  left: 45%;
-  top: 30%;
+  left: 43%;
+  top: 25%;
+}
+
+.settingsDiv h1{
+  text-align: center;
+  text-decoration: underline;
+}
+
+.languageSelector{
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.flag{
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+.flag{
+  display: none;
+}
+
+label img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.difficulty-selector {
+  display: flex;
+  justify-content: space-around;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.difficulty-selector label {
+  margin-top: 12px;
+  position: absolute;
+}
+
+.arrow {
+  font-size: 45px;
+  font-weight: bold;
+  color: azure;
+  padding: 10px;
+  background: none;
+  border: none;
+}
+
+.left-arrow{
+  position: absolute;
+  left: 40px;
+}
+
+.right-arrow{
+  position: absolute;
+  right: 40px;
+}
+
+.arrow:hover {
+  color: #20b5d8;
+}
+
+.volumeSelector{
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.toggleContainer {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: fit-content;
+  border: 3px solid #343434;
+  border-radius: 20px;
+  background: #343434;
+  font-weight: bold;
+  color: #343434;
+  cursor: pointer;
+}
+.toggleContainer::before {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 0%;
+  border-radius:20px;
+  background: white;
+  transition: all 0.3s;
+}
+.toggleCheckbox:checked + .toggleContainer::before {
+   left: 50%;
+}
+.toggleContainer div {
+  padding: 6px;
+  text-align: center;
+  z-index: 1;
+}
+.toggleCheckbox {
+  display: none;
+}
+.toggleCheckbox:checked + .toggleContainer div:first-child{
+  color: white;
+  transition: color 0.3s;
+}
+.toggleCheckbox:checked + .toggleContainer div:last-child{
+  color: #343434;
+  transition: color 0.3s;
+}
+.toggleCheckbox + .toggleContainer div:first-child{
+  color: #343434;
+  transition: color 0.3s;
+}
+.toggleCheckbox + .toggleContainer div:last-child{
+  color: white;
+  transition: color 0.3s;
+}
+
+.inputSelector{
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.confirmBtnContainer{
+  display: flex;
+  justify-content: center;
+}
+
+hr.rounded {
+  border-top: 2px solid #fff;
+  opacity: 0.9;
+  border-radius: 5px;
+}
+
+
+.saveButton{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: #20b5d8;
+  color: white;
+  border: transparent;
+  padding: 10px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.saveButton:hover{
+  background-color: #1a9cb0;
 }

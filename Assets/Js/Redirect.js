@@ -1,15 +1,5 @@
 document.getElementById("Play-Btn").addEventListener("click", redirectPlay);
-document.getElementById("Team-Btn").addEventListener("click", redirectTeam);
-document.getElementById("Journal-Btn").addEventListener("click", redirectJournal);
 
 function redirectPlay(){
-    window.location = "Pages\\DifficultySelector.html"; 
-}
-
-function redirectTeam(){
-    window.location = "..\\Pages\\Rules.html"
-}
-
-function redirectJournal(){
-    window.location = "..\\Pages\\Journal.html"
+    window.location = "Pages\\Settings.html"; 
 }
