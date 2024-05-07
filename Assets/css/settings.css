@@ -5,12 +5,15 @@
   padding: 40px;
   position: absolute;
   left: 43%;
-  top: 25%;
+  top: 22%;
+  height: 60%;
+  overflow: hidden;
 }
 
 .settingsDiv h1{
   text-align: center;
-  text-decoration: underline;
+  font-weight: bold;
+  
 }
 
 .languageSelector{
@@ -162,6 +165,7 @@ hr.rounded {
   padding: 10px;
   font-size: 17px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .saveButton:hover{

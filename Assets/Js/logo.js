@@ -63,7 +63,7 @@ window.addEventListener("load", function () {
       this.y = this.centerY - this.image.height * 0.5;
       this.gap = 3;
       this.mouse = {
-        radius: 3000,
+        radius: 20000,
         x: undefined,
         y: undefined,
       };
