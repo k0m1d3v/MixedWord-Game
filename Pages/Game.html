@@ -30,6 +30,15 @@
     </label>
   </div>
 
+  <div class="lifeContainer">
+    <h2>Life left:</h2>
+    <div class="life">
+      <i class="fa-solid fa-heart heart"></i>
+      <i class="fa-solid fa-heart heart"></i>
+      <i class="fa-solid fa-heart heart"></i>
+    </div>
+  </div>
+
     <div id="keyboard">
         <h1 class="scoreAndTimer">Score: <span id="scoreDisplay">0</span></h1>
         <input type="text" id="wordShuffled" placeholder="Generated and shuffled word" disabled>
@@ -75,13 +84,16 @@
                 <td><input class="key" type="button" value="B"></td>
                 <td><input class="key" type="button" value="N"></td>
                 <td><input class="key" type="button" value="M">
-                
             </tr>
         </table>
 
-        <h1 class="scoreAndTimer">Timer: <span id="timer">0</span></h1>
+        <div class="clock-wrap">
+          <div class="clock pro-0">
+            <h1 class="scoreAndTimer">Timer: <span id="timer"> <span class="count"> 0 </span></span></h1>
+
     </div>
 
     <script src="..\Assets\Js\game.js"></script>
+    <script src="..\Assets\Js\keyListener.js"></script>
 </body>
 </html>
