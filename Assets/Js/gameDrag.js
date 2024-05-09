@@ -163,6 +163,20 @@ checkBtn.addEventListener('click', function() {
     } else {
         messageElement.textContent = 'Wrong!';
         messageElement.style.color = 'red';
+        life--;
+        lifeLabel.innerHTML = '';
+        for (let i = 0; i < life; i++) {
+            lifeLabel.innerHTML += '❤️';
+        }
+        if (life === 0) {
+            messageElement.textContent = 'Game Over!';
+            messageElement.style.color = 'red';
+            clearInterval(timerInterval);
+            sessionStorage.setItem('score', 0);
+            setTimeout(() => {
+                window.location.href = 'gameOver.html';
+            }, 2000);
+        }
     }
 });
 

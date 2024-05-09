@@ -52,7 +52,13 @@ let checkWord = () => {
             lifeLabel.innerHTML += '❤️'; // Add the remaining hearts
         }
         if (life === 0) {
-            location.href = 'Gameover.html';
+            messageElement.textContent = 'Game Over!';
+            messageElement.style.color = 'red';
+            clearInterval(timerInterval);
+            sessionStorage.setItem('score', 0);
+            setTimeout(() => {
+                window.location.href = 'gameOver.html';
+            }, 2000);
         }
     }
 }

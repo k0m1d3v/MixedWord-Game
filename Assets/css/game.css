@@ -117,3 +117,10 @@ body {
   color: white;
   text-align: center;
 }
+
+.Instructions {
+  position: absolute;
+  top: 15%;
+  color: yellow;
+  font-style: italic;
+}
