@@ -60,23 +60,23 @@
         <h2>Language:</h2>
         <div class="languageSelector">
           <input
+            id="italianFlag"
             class="flag"
             type="radio"
-            id="Italian"
             name="language"
             value="Italian"
           />
-          <label for="Italian">
+          <label for="italianFlag">
             <img src="../Assets/svg/it.png" alt="Italian Flag" />
           </label>
           <input
-            class="flag"
+            id="englishFlag"
+            class="flag englishFlag"
             type="radio"
-            id="English"
             name="language"
             value="English"
           />
-          <label for="English">
+          <label for="englishFlag">
             <img src="../Assets/svg/gb.png" alt="English Flag" />
           </label>
         </div>
@@ -85,19 +85,10 @@
         <div class="Selection-containers">
           <div class="difficulty-selector">
             <button class="arrow left-arrow">&#8249;</button>
-            <label class="difficulty-label" for="difficulty">medium</label>
+            <label class="difficulty-label" for="difficulty">Easy</label>
             <button class="arrow right-arrow">&#8250;</button>
             <br />
           </div>
-        </div>
-        <br />
-        <h2>Volume:</h2>
-        <div class="volumeSelector">
-          <input type="checkbox" id="toggleVolume" class="toggleCheckbox" />
-          <label for="toggleVolume" class="toggleContainer">
-            <div>Sound</div>
-            <div>Mute</div>
-          </label>
         </div>
         <br />
         <h2>Keyboard type:</h2>
@@ -114,8 +105,10 @@
           <button class="saveButton">Confirm</button>
         </div>
       </div>
+      <div class="elfsight-app-f70f7d8e-23ce-47d4-8eb6-6f0503474d78" data-elfsight-app-lazy></div>
     </main>
 
-    <script src="..\Assets\Js\difficulty.js"></script>
+    <script src="..\Assets\Js\settings.js"></script>
+    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
   </body>
 </html>

@@ -1,6 +1,15 @@
 let timerInterval = null; // Initialize timerInterval to null
 let language = sessionStorage.getItem('language');
 let score = 0;
+let life = sessionStorage.getItem('life');
+
+let lifeLabel = document.querySelector('.lifeLabel');
+
+window.onload = function() {
+    for (let i = 0; i < life; i++) {
+        lifeLabel.innerHTML += '❤️';
+    }
+}
 
 let difficulty = sessionStorage.getItem('difficulty');
 switch (difficulty) {
@@ -24,12 +33,25 @@ const inputs = document.querySelectorAll('input[type="button"]');
 const wordInput = document.getElementById('wordInput');
 const scoreDisplay = document.getElementById('scoreDisplay');
 let checkWord = () => {
+    let messageElement = document.querySelector('.message');
+    let lifeLabel = document.querySelector('.lifeLabel');
+
     if (wordInput.value.toUpperCase() === extractedWord.toUpperCase()) {
-        alert('Hai indovinato!'); // TODO: Replace with some css effect
+        messageElement.textContent = 'Corretto!';
+        messageElement.style.color = 'lightgreen';
         updateScore();
         newWord();
     } else {
-        alert('Riprova!'); // TODO: Replace with some css effect
+        messageElement.textContent = 'Riprova!';
+        messageElement.style.color = 'red';
+        life--;
+        lifeLabel.innerHTML = ''; // Clear the current hearts
+        for (let i = 0; i < life; i++) {
+            lifeLabel.innerHTML += '❤️'; // Add the remaining hearts
+        }
+        if (life === 0) {
+            location.href = 'Gameover.html';
+        }
     }
 }
 function shuffle(extractedWord) {

@@ -33,10 +33,17 @@
   <div class="lifeContainer">
     <h2>Life left:</h2>
     <div class="life">
-      <i class="fa-solid fa-heart heart"></i>
-      <i class="fa-solid fa-heart heart"></i>
-      <i class="fa-solid fa-heart heart"></i>
+      <h3 class="lifeLabel"></h3>
     </div>
+  </div>
+
+  <div class="maxScore">
+    <h2>Highest:</h2>
+    <h3 id="maxScore">0</h3>
+  </div>
+
+  <div class="displayMessage">
+    <h2 class="message">Correct!</h2>
   </div>
 
     <div id="keyboard">
@@ -92,10 +99,12 @@
             <h1 class="scoreAndTimer">Timer: <span id="timer">0</span></h1>
           </div>
         </div>
-
     </div>
+
+    <div class="elfsight-app-f70f7d8e-23ce-47d4-8eb6-6f0503474d78" data-elfsight-app-lazy></div>
 
     <script src="..\Assets\Js\game.js"></script>
     <script src="..\Assets\Js\keyListener.js"></script>
+    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
 </body>
 </html>

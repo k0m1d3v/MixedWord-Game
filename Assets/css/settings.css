@@ -1,23 +1,23 @@
 .settingsDiv{
   background-color: #143785;
   color: white;
-  border-radius: 10px;
+  border-radius: 15px;
   padding: 40px;
   position: absolute;
-  left: 43%;
+  left: 39%;
   top: 22%;
-  height: 60%;
+  height: 57%;
   overflow: hidden;
 }
 
 .settingsDiv h1{
   text-align: center;
   font-weight: bold;
-  
 }
 
 .languageSelector{
-  margin-top: 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
   display: flex;
   justify-content: space-around;
 }
@@ -43,6 +43,7 @@ label img{
 
 .difficulty-selector {
   display: flex;
+  margin-bottom: 20px;
   justify-content: space-around;
   font-size: 40px;
   font-weight: bold;
@@ -76,15 +77,8 @@ label img{
   color: #20b5d8;
 }
 
-.volumeSelector{
-  margin-top: 10px;
-  display: flex;
-  justify-content: space-around;
-  font-size: 20px;
-  font-weight: bold;
-}
-
 .toggleContainer {
+  margin-top: 10px;
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -96,6 +90,7 @@ label img{
   color: #343434;
   cursor: pointer;
 }
+
 .toggleContainer::before {
   content: '';
   position: absolute;
@@ -170,4 +165,5 @@ hr.rounded {
 
 .saveButton:hover{
   background-color: #1a9cb0;
+  transform: scale(1.1);
 }

@@ -1,0 +1,53 @@
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.gameover {
+    top: 35%;
+    left: 40%;
+    position: absolute;
+    align-items: center;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    animation: pulse 2s infinite;
+}
+
+.gameover:hover {
+    animation: none;
+}
+
+.gameover h1{
+    background-color: rgb(192, 18, 18);
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+#playAgain{
+    margin-top: 20px;
+    display: flex;
+    border-radius: 20px;
+    background-color: #20b5d8;
+    color: white;
+    border: transparent;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    left: 40%;
+}
+
+#playAgain:hover {
+    background-color: #1a8ba8;
+    transform: scale(1.1);
+}
