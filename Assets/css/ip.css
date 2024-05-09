@@ -1,9 +1,9 @@
 .ip{
-
+    background-color: #143785;
+    padding: 40px;
+    border-radius: 20px;
     font-size: 100px;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     position: absolute;
-
-
 }

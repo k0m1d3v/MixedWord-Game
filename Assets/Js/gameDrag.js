@@ -1,9 +1,10 @@
-let timerInterval = null; // Initialize timerInterval to null
+let timerInterval = null; // Inizializza timerInterval a null
 let language = sessionStorage.getItem('language');
 let score = 0;
 let life = sessionStorage.getItem('life');
 let highscore = sessionStorage.getItem('highscore');
 
+let messageElement = document.querySelector('.message');
 let lifeLabel = document.querySelector('.lifeLabel');
 
 window.onload = function() {
@@ -12,6 +13,8 @@ window.onload = function() {
     }
     document.getElementById('maxScore').innerHTML = highscore;
 }
+
+let length; // Dichiarazione della variabile length
 
 let difficulty = sessionStorage.getItem('difficulty');
 switch (difficulty) {
@@ -30,32 +33,7 @@ switch (difficulty) {
 
 sessionStorage.setItem('score', score);
 
-// Get the input elements
-const inputs = document.querySelectorAll('input[type="button"]');
-const wordInput = document.getElementById('wordInput');
-const scoreDisplay = document.getElementById('scoreDisplay');
-let checkWord = () => {
-    let messageElement = document.querySelector('.message');
-    let lifeLabel = document.querySelector('.lifeLabel');
-
-    if (wordInput.value.toUpperCase() === extractedWord.toUpperCase()) {
-        messageElement.textContent = 'Correct!';
-        messageElement.style.color = 'lightgreen';
-        updateScore();
-        newWord();
-    } else {
-        messageElement.textContent = 'Wrong!';
-        messageElement.style.color = 'red';
-        life--;
-        lifeLabel.innerHTML = ''; // Clear the current hearts
-        for (let i = 0; i < life; i++) {
-            lifeLabel.innerHTML += '❤️'; // Add the remaining hearts
-        }
-        if (life === 0) {
-            location.href = 'Gameover.html';
-        }
-    }
-}
+// Shuffle the word
 function shuffle(extractedWord) {
     let parola = extractedWord;
     let output = '';
@@ -72,40 +50,32 @@ function shuffle(extractedWord) {
         ll--;
     }
     if (output.toUpperCase() != parola.toUpperCase()) {
-        document.getElementById("wordShuffled").value = output;
+        const letters = output.split('');
+        const container = document.querySelector('.drag-container');
+        container.innerHTML = '';
+        letters.forEach(letter => {
+            const div = document.createElement('div');
+            div.textContent = letter;
+            div.classList.add('draggable');
+            container.appendChild(div);
+        });
         console.log(parola + " --> " + output); // DEBUG
     } else {
         shuffle(extractedWord);
     }
 }
+
+// Randomic word
 function randWord(ling,lunghezza){
     const xmlhttp = new XMLHttpRequest();
     xmlhttp.onload = function() {
         let parola = JSON.parse(this.responseText);
         sessionStorage.setItem('word',parola);
-       }
+    }
     xmlhttp.open("GET", "https://www.defio.info/REST/lingue/entrambe.php?lingua="+ling+"&lun="+lunghezza);
     xmlhttp.send();
 }
-// Add event listener to each input
-inputs.forEach(input => {
-    input.addEventListener('click', event => {
-        // Get the button value
-        const value = input.value;
-        
-        // Check for specific button values
-        if (value === '❌') {
-            wordInput.value = '';
-        } else if (value === '➡') {
-            checkWord();
-            wordInput.value = '';
-        } else if (value === '⬅') {
-            wordInput.value = wordInput.value.slice(0, -1);
-        } else {
-            wordInput.value += value;
-        }
-    });
-});
+
 function updateScore() {
     score+= 100;
     sessionStorage.setItem('score', score);
@@ -115,22 +85,29 @@ function updateScore() {
     }
     scoreDisplay.innerHTML = score;
 }
+
+let draggables = document.querySelectorAll('.draggable');
+
 function newWord() {
     randWord(language, length);
     extractedWord = sessionStorage.getItem('word');
+    correctWord = extractedWord;
     shuffle(extractedWord);
     startTimer();
+    draggables = document.querySelectorAll('.draggable');
+    attachEventListeners();
 }
-let timeLeft = 60; // Set the initial time (in seconds)
-// Get the HTML element where you want to display the timer
-const timerElement = document.getElementById('timer'); 
+
+let timeLeft = 60; // Imposta il tempo iniziale (in secondi)
+const timerElement = document.getElementById('timer'); // Ottieni l'elemento HTML dove vuoi visualizzare il timer
+
 function startTimer() {
-    // Clear any existing timer
+    // Cancella qualsiasi timer esistente
     if (timerInterval) {
         clearInterval(timerInterval);
     }
-    timeLeft = 60; // Reset the time
-    // Update the timer every second
+    timeLeft = 60; // Reimposta il tempo
+    // Aggiorna il timer ogni secondo
     timerInterval = setInterval(() => {
         timeLeft--;
         timerElement.textContent = timeLeft;
@@ -152,3 +129,57 @@ function startTimer() {
     }, 1000);
 }
 newWord();
+
+// Drag and drop
+let previousDiv = null;
+
+draggables.forEach(draggable => {
+    draggable.addEventListener('click', function() {
+        if (previousDiv) {
+            const temp = this.innerHTML;
+            this.innerHTML = previousDiv.innerHTML;
+            previousDiv.innerHTML = temp;
+            previousDiv = null;
+        } else {
+            previousDiv = this;
+        }
+    });
+});
+
+
+// check word
+const checkBtn = document.querySelector('.saveButton');
+checkBtn.addEventListener('click', function() {
+    const currentOrder = Array.from(draggables).map(draggable => draggable.innerHTML).join('');
+
+    console.log(currentOrder);
+    console.log(correctWord);
+
+    if (currentOrder === correctWord.toUpperCase()) {
+        messageElement.textContent = 'Correct!';
+        messageElement.style.color = 'green';
+        updateScore();
+        newWord();
+    } else {
+        messageElement.textContent = 'Wrong!';
+        messageElement.style.color = 'red';
+    }
+});
+
+function attachEventListeners() {
+    let draggables = document.querySelectorAll('.draggable');
+    draggables.forEach(draggable => {
+        draggable.addEventListener('click', function() {
+            if (previousDiv) {
+                const temp = this.innerHTML;
+                this.innerHTML = previousDiv.innerHTML;
+                previousDiv.innerHTML = temp;
+                previousDiv = null;
+            } else {
+                previousDiv = this;
+            }
+        });
+    });
+}
+
+attachEventListeners();
