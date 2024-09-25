@@ -1,3 +1,2 @@
 # Mixed word game
- Work in progress!!!
- roblox song
+a school project based on word shuffling mechanism, it's cool check it out!
